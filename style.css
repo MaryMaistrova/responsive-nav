@@ -1,6 +1,7 @@
 body {
   background-color: #161D31;
   margin: 0;
+  transition: 300ms;
   ul {
     list-style: none;
   }
@@ -18,11 +19,18 @@ header {
   height: 80px;
   border-radius: 8px;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 header>ul {
   display: flex;
   gap: 20px;
+  align-items: center;
+}
+
+header svg:hover .grey-hover{
+  fill: #fff;
+  transition: 300ms;
 }
 
 .wrapper {
@@ -36,6 +44,20 @@ header>ul {
   display: flex;
   gap: 20px;  
   align-items: center;
+}
+
+.small-wrapper:first-of-type:hover {
+  background-color: #ded9d9;
+  transition: 300ms;
+}
+
+.small-wrapper:first-of-type {
+  padding: 5px;
+}
+
+.small-wrapper:first-of-type:hover span {
+  color: #161D31;
+  transition: 300ms;
 }
 
 header span {
@@ -61,6 +83,7 @@ aside {
   height: 100%;
   width: 110px;
   top: 0;
+  cursor: pointer;
 }
 
 .side-wrapper {
@@ -68,35 +91,60 @@ aside {
   flex-direction: column;
   padding-top: 30px;
   padding-bottom: 30px;
-  gap: 20px;
   align-items: center;
 }
 
-aside>ul {
+.side-wrapper:first-of-type {
+  gap: 30px;
+}
+
+aside>.side-wrapper:first-of-type>svg:first-of-type:hover {
+  transform: rotate(360deg);
+  transition: 1000ms;
+}
+
+.side-wrapper svg:hover .grey-hover{
+  fill: #fff;
+  transition: 300ms;
+}
+
+.purple-square {
   display: flex;
   flex-direction: column;
-  padding: 0px;
-  gap: 10px;  
+  width: 110px;
+  height: 80px;
   align-items: center;
+  justify-content: center;
+  gap: 11px;
+  box-sizing: border-box;
+  transition: 300ms;
 }
 
-li, .side-wrapper>span {
+.purple-square:hover {
+  background-color: #9E8CFC;
+}
+
+.side-wrapper span {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: lightgray;
 }
 
-/* color for not hover #BDBDBD  class= "grey-hover" */
-
-svg:not(:hover) .grey-hover{
+.purple-square:not(:hover) .grey-hover{
   fill: #BDBDBD;
+  transition: 300ms;
 }
 
-svg:hover ~ span {
+.purple-square:hover span {
   color: #fff;
+  transition: 300ms;
 }
 
-li:hover + li {
+hr {
+  border: none;
+  border-top: 10px dashed #9E8CFC;
   color: #fff;
+  background-color: #283046;
+  height: 2px;
+  width: 70%;
 }
-
