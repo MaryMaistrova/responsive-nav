@@ -76,15 +76,14 @@ main {
 
 aside {
   background-color: #283046;
-  position: fixed;
+  position: absolute;
   margin-top: 0;
   margin-bottom: 20px;
   margin-left: 0;
-  height: 100%;
+  height: fit-content;
   width: 110px;
   top: 0;
   cursor: pointer;
-  overflow-y: scroll;
 }
 
 .side-wrapper {
